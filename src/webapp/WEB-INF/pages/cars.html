@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<table border="1">
+    <a href="/cars?count=0">Cars Count 0<br></a>
+    <a href="/cars?count=1">Cars Count 1<br></a>
+    <a href="/cars?count=2">Cars Count 2<br></a>
+    <a href="/cars?count=3">Cars Count 3<br></a>
+    <a href="/cars?count=4">Cars Count 4<br></a>
+    <a href="/cars">All Cars<br></a>
+    <caption>Car List</caption>
+    <tr>
+        <th> Name</th>
+        <th> Color</th>
+        <th> Year</th>
+    </tr>
+    <tr th:each="car:${cars}">
+        <td th:text="${car.getName()}"> Name</td>
+        <td th:text="${car.getColor()}"> Color</td>
+        <td th:text="${car.getYear()}"> Year</td>
+    </tr>
+</table>
+</body>
+</html>
+
+<!--<h1><a href="/cars">CLICK ME<br></a></h1>-->
