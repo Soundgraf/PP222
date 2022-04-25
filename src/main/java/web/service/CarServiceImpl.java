@@ -15,7 +15,7 @@ public class CarServiceImpl implements CarService {
     @Override
     public List<Car> carCountList(int count) {
         List<Car> Cars = carDao.carList();
-        if (count == 0 || count > 5) {
+        if (count > 5) {
             return Cars.subList(0, 5);
         }
         return Cars.subList(0, count);
