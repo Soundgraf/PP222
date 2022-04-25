@@ -16,7 +16,7 @@ public class CarServiceImpl implements CarService {
     public List<Car> carCountList(int count) {
         List<Car> Cars = carDao.carList();
         if (count == 0 || count > 5) {
-            return Cars;
+            return Cars.subList(0, 5);
         }
         return Cars.subList(0, count);
     }
